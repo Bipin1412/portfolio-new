@@ -611,3 +611,19 @@ footer {
   grid-template-rows: auto; /* Rows will automatically adjust based on content */
   gap: 10px;
 }
+
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+  .project-container {
+    width: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
