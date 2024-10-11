@@ -604,3 +604,10 @@ footer {
   display: flex;
   gap: 1rem;
 }
+
+.skill-conatiner-right{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+  grid-template-rows: auto; /* Rows will automatically adjust based on content */
+  gap: 10px;
+}
