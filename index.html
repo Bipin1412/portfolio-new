@@ -191,8 +191,8 @@
               </p>
               <div class="btn-group">
                 <button class="btn-pink btn-project">Read More</button>
-                <a href="">
-                  <i title="GitHubLink" class="fa-brands fa-github icon"><a href="https://github.com/Bipin1412/shop-cart"></a></i>
+                <a href="https://github.com/Bipin1412/shop-cart">
+                  <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                 </a>
                 <!-- <a href="">
                   <i title="Live link" class="fa-solid fa-link icon"></i>
@@ -317,44 +317,27 @@
             Questions, Thoughts, Or Just Want To Say Hello?
           </h3>
         </div>
-      
+     
         <div class="contactus-form-container">
-          <form id="contactForm">
-            <div class="formfield-container">
-              <input class="formfield" type="text" name="name" placeholder="Enter your name" required />
-              <input class="formfield" type="email" name="email" placeholder="Enter your Email Address" required />
-              <input class="formfield" type="text" name="subject" placeholder="Enter your subject" required />
-              <textarea name="message" cols="30" rows="5" class="formfield formfield-textarea" placeholder="Enter your message" required></textarea>
-            </div>
-      
-            <div>
-              <button type="submit" class="btn-pink" id="submit-btn">
-                Send Message <i class="submit-icon fa-solid fa-paper-plane"></i>
-              </button>
-            </div>
-          </form>
+          
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" >
+              <div class="formfield-container">
+                <input type="hidden" name="access_key" value="17b82993-1ac4-4d33-94ea-5bdf6d14011a">
+                <input class="formfield" type="text" name="name" id="name" placeholder="Enter your name" required />
+                <input class="formfield" type="email" name="email" id="email" placeholder="Enter your Email Address" required />
+                <input class="formfield" type="text" name="subject" id="subject" placeholder="Enter your subject" required />
+                <textarea name="message" cols="30" rows="5" class="formfield formfield-textarea" id="message" placeholder="Enter your message" required></textarea>
+              </div>
+          
+              <div>
+                <button type="submit" class="btn-pink" id="submit-btn">
+                  Send Message <i class="submit-icon fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
         </div>
       </div>
       
-      <script>
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-      
-        const formData = new FormData(this);
-      
-        // Use Fetch API to send the form data to the server
-        fetch('/send-email', {
-          method: 'POST',
-          body: new URLSearchParams(formData),
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-        })
-        .then(response => response.text())
-        .then(result => alert(result))
-        .catch(error => console.error('Error:', error));
-      });
-      </script>
-      
-
       <footer>
         <div class="footer-wrapper">
           <div class="footer-faded-text">Bipin Mandal</div>
@@ -399,6 +382,11 @@
         backSpeed: 80,
         backDelay: 1000,
       });
+    </script>
+
+
+    <script>
+    
     </script>
   </body>
 </html>
