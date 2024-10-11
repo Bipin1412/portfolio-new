@@ -627,21 +627,4 @@ img {
   height: auto;
 }
 
-.faded-text {
-  position: absolute;
-  z-index: -1; /* Sends it behind other elements */
-  opacity: 0.1; /* Gives the faded effect */
-  font-size: 5rem; /* Adjust size */
-}
-
-@media (max-width: 768px) {
-  .faded-text {
-    font-size: 3rem; /* Smaller text for mobile */
-    top: 50px; /* Adjust position */
-  }
-}
-
-.hero-section {
-  position: relative;
-}
 
