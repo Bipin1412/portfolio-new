@@ -323,7 +323,7 @@ a {
 .project-card {
   width: 90%;
   height: 550px;
-  background-image: url(./project/Project1.png);
+  background-image: url(./images/E-Commerce.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -439,14 +439,14 @@ a {
 } */
 #project02 {
   margin: 120px;
-  background-image: url(./project/Project2.png);
+  background-image: url(./images/headphones-dark.webp);
 }
 #project03 {
-  background-image: url(./project/Project3.png);
+  background-image: url(./images/snake\ game.png);
 }
 #project04 {
   margin: 120px;
-  background-image: url(./project/Project4.png);
+  background-image: url(./images//shop.png);
 }
 
 .skill-fade-text {

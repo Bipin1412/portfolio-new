@@ -85,18 +85,14 @@
                 <img src="./stack/HTML.png" class="project-skill" />
                 <img src="./stack/CSS.png" class="project-skill" />
                 <img src="./stack/Javascript.svg" class="project-skill" />
-                <img src="./stack/Express.png" class="project-skill" />
-                <img src="./stack/NextJsCircle.png" class="project-skill" />
-                <img src="./stack/Tailwind.png" class="project-skill" />
                 <img src="./stack/NodeJs.svg" class="project-skill" />
                 <img src="./stack/MongoDB.svg" class="project-skill" />
                 
               </div>
 
-              <h2 class="project-heading">Tint & Orange</h2>
+              <h2 class="project-heading">BuyIt E-Commerce website</h2>
               <p class="project-subheading">
-                Its is a car modification copany which provide you sheets to
-                protect your car from scratch
+                BuyIt is an intuitive e-commerce platform offering a seamless shopping experience with a wide range of products, secure transactions, and fast delivery services.
               </p>
               <div class="btn-group">
                 <button class="btn-pink btn-project">Read More</button>
@@ -128,13 +124,13 @@
                
               </div>
 
-              <h2 class="project-heading">Tint & Orange</h2>
+              <h2 class="project-heading">Music Player</h2>
               <p class="project-subheading">
-                Its is a car modification copany which provide you sheets to
-                protect your car from scratch
+                A responsive and user-friendly music player with seamless controls for playing, pausing, and navigating through a playlist
               </p>
               <div class="btn-group">
-                <button class="btn-pink btn-project">Read More</button>
+                 
+                <a  href="https://music-player-five-bay.vercel.app/" target="_blank"  >  <button  class="btn-pink btn-project" >Read More</button></a>
                 <a href="">
                   <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                 </a>
@@ -164,10 +160,9 @@
                 <img src="./stack/Vercel.svg" class="project-skill" />
               </div>
 
-              <h2 class="project-heading">Tint & Orange</h2>
+              <h2 class="project-heading">Snake Game!</h2>
               <p class="project-subheading">
-                Its is a car modification copany which provide you sheets to
-                protect your car from scratch
+                The snake game involves controlling a growing snake to eat food while avoiding collisions with its own body or walls. The game ends if the snake crashes into itself or the boundaries.
               </p>
               <div class="btn-group">
                 <button class="btn-pink btn-project">Read More</button>
@@ -200,10 +195,10 @@
                 <img src="./stack/Vercel.svg" class="project-skill" />
               </div>
 
-              <h2 class="project-heading">Tint & Orange</h2>
+              <h2 class="project-heading">shopping Cart</h2>
               <p class="project-subheading">
-                Its is a car modification copany which provide you sheets to
-                protect your car from scratch
+               
+                A shopping cart lets users add and manage items for purchase on an e-commerce site before checkout. 
               </p>
               <div class="btn-group">
                 <button class="btn-pink btn-project">Read More</button>
@@ -278,7 +273,7 @@
         </div>
       </div>
 
-      <div class="contact-form-container" id="ContactMe">
+      <!-- <div class="contact-form-container" id="ContactMe">
         <div class="container">
           <h1 class="Contactus-heading">Contact Me</h1>
           <h3 class="contactus-subheading">
@@ -327,7 +322,52 @@
             </div>
           </form>
         </div>
+      </div> -->
+
+      <div class="contact-form-container" id="ContactMe">
+        <div class="container">
+          <h1 class="Contactus-heading">Contact Me</h1>
+          <h3 class="contactus-subheading">
+            Questions, Thoughts, Or Just Want To Say Hello?
+          </h3>
+        </div>
+      
+        <div class="contactus-form-container">
+          <form id="contactForm">
+            <div class="formfield-container">
+              <input class="formfield" type="text" name="name" placeholder="Enter your name" required />
+              <input class="formfield" type="email" name="email" placeholder="Enter your Email Address" required />
+              <input class="formfield" type="text" name="subject" placeholder="Enter your subject" required />
+              <textarea name="message" cols="30" rows="5" class="formfield formfield-textarea" placeholder="Enter your message" required></textarea>
+            </div>
+      
+            <div>
+              <button type="submit" class="btn-pink" id="submit-btn">
+                Send Message <i class="submit-icon fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
+      
+      <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+      
+        const formData = new FormData(this);
+      
+        // Use Fetch API to send the form data to the server
+        fetch('/send-email', {
+          method: 'POST',
+          body: new URLSearchParams(formData),
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        })
+        .then(response => response.text())
+        .then(result => alert(result))
+        .catch(error => console.error('Error:', error));
+      });
+      </script>
+      
 
       <footer>
         <div class="footer-wrapper">
